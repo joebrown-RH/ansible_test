@@ -15,4 +15,4 @@
     
         - name: Mask the WinRM password (if any)
           debug:
-            msg: "WinRM password: {{ ansible_password | default('No password set') | regex_replace('.*', '***') }} ansible user: {{ ansible_user | default ('myname') }}"
+            msg: "WinRM password: {{ ansible_password }} ansible user: {{ ansible_user | default ('myname') }}"
